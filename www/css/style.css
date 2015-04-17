@@ -1,0 +1,48 @@
+body {
+  cursor: url('../img/finger.png'), auto;
+}
+
+.margin {
+    margin - left: 9px;
+    margin - right: 9px;
+}
+
+.icon-actions {
+    font-size: 23px;
+}
+
+
+.checkbox {
+    vertical-align: middle;
+}
+
+.actions {
+    float: right;
+}
+
+.item-text-wrap {
+    overflow: auto;
+}
+
+.ion-checkmark-circled.icon-actions.margin
+{
+	margin-right: 35px;
+}
+
+
+
+.login{
+ background-image: url("../img/logo.png");
+ background-repeat: no-repeat;
+ background-position: center top 40px;
+ background-attachment: fixed;
+ background-size: 280px 70px;
+ background-color:#3b5998;
+ background-padding:135px;
+
+}
+
+.loginbar-titulo{
+ background-color:#3b5998;
+ color: white;
+}

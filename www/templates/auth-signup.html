@@ -1,0 +1,35 @@
+<ion-view title="Registrar ususario"  align-title="center" class="login">
+ <!--  <ion-nav-bar class="loginbar-titulo"></ion-nav-bar> -->
+ <ion-content has-header="true" padding="true">
+ </br></br></br></br></br></br></br>
+
+ <div class="card" ng-if="showCard">
+  <div class="item item-divider">
+   Email sent
+  </div>
+  <div class="item item-text-wrap">
+  You received an email to reset your password. Reset your password and login!
+  </div>
+ </div>
+  
+
+ <div class="list">
+  
+  <label class="item item-input">
+   <input type="text" placeholder="Nombres y Apellidos" ng-model="user.name">
+  </label>
+
+  <label class="item item-input">
+   <input type="email" placeholder="Correo o Telefono" ng-model="user.email">
+  </label>
+  
+  <label class="item item-input">
+   <input type="password" placeholder="Contraseña" ng-model="user.password">
+  </label>
+   
+  <button class="button button-block button-stable" ng-click="createUser()"> Registrar usuario </button>
+
+
+  </div>
+ </ion-content>
+</ion-view>
