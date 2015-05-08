@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module('CaaMApp', ['ionic','ngCordova', 
 // modules
 'CaaMApp.controllers', 
@@ -6,6 +7,9 @@ angular.module('CaaMApp', ['ionic','ngCordova',
 ])
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 //CONSOLA
+=======
+angular.module('CaaMApp', ['ionic', 'CaaMApp.controllers', 'CaaMApp.services'])
+>>>>>>> origin/master
 .run(function($ionicPlatform) {
   
   $ionicPlatform.ready(function() {
@@ -19,11 +23,19 @@ angular.module('CaaMApp', ['ionic','ngCordova',
     }
   });
  
+<<<<<<< HEAD
 })  
+=======
+})
+>>>>>>> origin/master
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 //CONFIGURACION
 .config(['$ionicConfigProvider', function($ionicConfigProvider) 
 {
+<<<<<<< HEAD
+=======
+       
+>>>>>>> origin/master
  $ionicConfigProvider.navBar.alignTitle('center');
  $ionicConfigProvider.tabs.position('bottom'); 
  $ionicConfigProvider.tabs.style('standard');//striped and standard.
@@ -34,6 +46,7 @@ angular.module('CaaMApp', ['ionic','ngCordova',
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 //ROUTES
 .config(function($stateProvider, $urlRouterProvider) {
+<<<<<<< HEAD
 
  $stateProvider
  
@@ -197,6 +210,50 @@ angular.module('CaaMApp', ['ionic','ngCordova',
   templateUrl: 'templates/file/file.html',
   controller: "FileCtrl"
  })
+=======
+$stateProvider
+
+.state('auth', {
+    url: "/auth",
+    abstract: true,
+    templateUrl: "templates/auth.html"
+})
+
+.state('auth.signin', {
+    url: '/signin?card',
+    views: {
+        'auth-signin': {
+            templateUrl: 'templates/auth-signin.html',
+            controller: 'SignInCtrl'
+        }
+    }
+})
+
+.state('auth.forgot-password', {
+ url: '/forgot-password',
+ views: {
+  'auth-signin': {
+   templateUrl: 'templates/auth-forgot-password.html',
+   controller: 'ForgotPasswordCtrl'
+  }
+ }
+})
+
+.state('auth.signup', {
+    url: '/signup',
+    views: {
+        'auth-signup': {
+            templateUrl: 'templates/auth-signup.html',
+            controller: 'SignUpCtrl'
+        }
+    }
+})
+.state('bucket', {
+    url: "/bucket",
+    abstract: true,
+    templateUrl: "templates/bucket.html"
+})
+>>>>>>> origin/master
 
 /*
 .state('bucket.list', {
@@ -217,6 +274,10 @@ angular.module('CaaMApp', ['ionic','ngCordova',
         }
     }
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 .state('snd', {
  url : '/snd', 
  templateUrl : 'templates/snd-abstract.html',
@@ -225,6 +286,7 @@ angular.module('CaaMApp', ['ionic','ngCordova',
  })
 */
 
+<<<<<<< HEAD
 //$urlRouterProvider.otherwise('/opcion/home');
  $urlRouterProvider.otherwise('/sign-in');
  //$urlRouterProvider.otherwise("/menu/tab/emp_afi");
@@ -253,3 +315,30 @@ angular.module('CaaMApp', ['ionic','ngCordova',
   };
   
 });
+=======
+.state('bucket.emp_afi', {
+  url: "/emp_afi",
+  views: {
+    'bucket-emp_afi': {
+      templateUrl: "templates/emp_afi.html"
+      //controller: 'emp_afi_Ctrl'
+      
+    }
+  }
+ })
+
+ .state('bucket.emp_afi_fact', {
+  url: "/emp_afi_fact/:empresasId",
+  views: {
+   'bucket-emp_afi': {
+    templateUrl: "templates/emp_afi_fact.html"
+    //controller:'emp_afi_fact_Ctrl'
+   }
+  }
+ }) 
+
+$urlRouterProvider.otherwise('/auth/signin');
+})
+
+.controller('MainCtrl',     function($scope, $ionicSideMenuDelegate) { })
+>>>>>>> origin/master

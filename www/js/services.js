@@ -1,9 +1,55 @@
 angular.module('CaaMApp.services', [])
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+<<<<<<< HEAD
 //SERVICIO DE USUARIOS 
 .factory('API', function($http, $rootScope, $ionicLoading, $window) {
 var base = "http://bucketlistapplication.herokuapp.com";
 
+=======
+.factory('EmpServiceFactura', function () {
+ var empresas = [];
+ empresas = [
+    { id: '0',  usuario: 'caamingenierias@hotmail.com', nombre: 'AlKosto', imagen: '../img/empresas/alkosto.gif', saldo: '290800', facturas : '0' },
+    { id: '1',  usuario: 'caamingenierias@hotmail.com', nombre: 'Claro', imagen: '../img/empresas/claro.jpg', saldo: '560000', facturas : '1' },
+    { id: '2',  usuario: 'caamingenierias@hotmail.com', nombre: 'Disel', imagen: '../img/empresas/disel.jpg', saldo: '230800', facturas : '0' },
+    { id: '3',  usuario: 'caamingenierias@hotmail.com', nombre: 'Exito', imagen: '../img/empresas/exito1.jpg', saldo: '450000', facturas : '2' },
+    { id: '4',  usuario: 'caamingenierias@hotmail.com', nombre: 'Farabella', imagen: '../img/empresas/farabella.jpg', saldo: '91800', facturas : '0' },
+    { id: '5',  usuario: 'caamingenierias@hotmail.com', nombre: 'Farma Todo', imagen: '../img/empresas/farma todo1.jpg', saldo: '23000', facturas : '0' },
+    { id: '6',  usuario: 'caamingenierias@hotmail.com', nombre: 'Hard Rock', imagen: '../img/empresas/hard rock.jpg', saldo: '55000', facturas : '0' },
+    { id: '7',  usuario: 'caamingenierias@hotmail.com', nombre: 'HomeCenter', imagen: '../img/empresas/home center1.jpg', saldo: '4560000', facturas : '0' },    
+    { id: '8',  usuario: 'caamingenierias@hotmail.com', nombre: 'Juan Valdez', imagen: '../img/empresas/juan valdez1.jpg', saldo: '96000', facturas : '0' },
+    { id: '9',  usuario: 'caamingenierias@hotmail.com', nombre: 'Jumbo', imagen: '../img/empresas/jumbo.jpg', saldo: '657700', facturas : '0' },
+    { id: '10', usuario: 'caamingenierias@hotmail.com', nombre: 'La Rebaja', imagen: '../img/empresas/la rebaja.jpg', saldo: '45000', facturas : '0' },
+    { id: '11', usuario: 'caamingenierias@hotmail.com', nombre: 'Mega Tienda', imagen: '../img/empresas/mega tienda1.jpg', saldo: '3400000', facturas : '0' },
+    { id: '12', usuario: 'caamingenierias@hotmail.com', nombre: 'Magdonalds', imagen: '../img/empresas/mgdonalds.png', saldo: '640000', facturas : '0' },
+    { id: '13', usuario: 'caamingenierias@hotmail.com', nombre: 'Movistar', imagen: '../img/empresas/movistar.png', saldo: '450789', facturas : '0' },
+    { id: '14', usuario: 'caamingenierias@hotmail.com', nombre: 'Presto', imagen: '../img/empresas/presto1.jpg', saldo: '67543', facturas : '0' },
+    { id: '15', usuario: 'caamingenierias@hotmail.com', nombre: 'Subway', imagen: '../img/empresas/subway1.jpg', saldo: '210000', facturas : '0' },    
+    { id: '16', usuario: 'caamingenierias@hotmail.com', nombre: 'Tigo', imagen: '../img/empresas/tigo.jpg', saldo: '70000', facturas : '0' },    
+ ];
+
+ return {
+  all: function () {
+   return empresas;
+  },
+ 
+  get: function (empresaId) {
+   return empresas[empresaId];
+  }
+ };
+})
+
+
+
+
+
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.factory('API', function ($rootScope, $http, $ionicLoading, $window) {
+var base = "http://bucketlistapplication.herokuapp.com";
+>>>>>>> origin/master
 $rootScope.show = function (text) {
     $rootScope.loading = $ionicLoading.show({
         content: text ? text : 'Loading',
@@ -18,6 +64,7 @@ $rootScope.hide = function () {
     $ionicLoading.hide();
 };
 
+<<<<<<< HEAD
 
 $rootScope.notify =function(text){
     $rootScope.show(text);
@@ -29,6 +76,11 @@ $rootScope.notify =function(text){
 $rootScope.logout = function () {
     $rootScope.setToken("");
     $window.location.href = '#/signin';
+=======
+$rootScope.logout = function () {
+    $rootScope.setToken("");
+    $window.location.href = '#/auth/signin';
+>>>>>>> origin/master
 };
 
 $rootScope.notify =function(text){
@@ -38,6 +90,18 @@ $rootScope.notify =function(text){
     }, 1999);
 };
 
+<<<<<<< HEAD
+=======
+$rootScope.doRefresh = function (tab) {
+    if(tab == 1)
+        $rootScope.$broadcast('fetchAll');
+    else
+        $rootScope.$broadcast('fetchCompleted');
+    
+    $rootScope.$broadcast('scroll.refreshComplete');
+};
+
+>>>>>>> origin/master
 $rootScope.setToken = function (token) {
     return $window.localStorage.token = token;
 }
@@ -50,6 +114,7 @@ $rootScope.isSessionActive = function () {
     return $window.localStorage.token ? true : false;
 }
 
+<<<<<<< HEAD
 $rootScope.doRefresh = function (tab) {
     if(tab == 1)
         $rootScope.$broadcast('fetchAll');
@@ -59,6 +124,8 @@ $rootScope.doRefresh = function (tab) {
     $rootScope.$broadcast('scroll.refreshComplete');
 };
 
+=======
+>>>>>>> origin/master
 return {
     signin: function (form) {
         return $http.post(base+'/api/v1/bucketList/auth/login', form);
@@ -67,6 +134,7 @@ return {
         return $http.post(base+'/api/v1/bucketList/auth/register', form);
     },
     getAll: function (email) {
+<<<<<<< HEAD
         return $http.get(base+'/api/v1/bucketList/data/list', 
         {
            method: 'GET',
@@ -87,6 +155,23 @@ return {
         });
     }
     /*
+=======
+        return $http.get(base+'/api/v1/bucketList/data/list', {
+            method: 'GET',
+            params: {
+                token: email
+            }
+        });
+    },
+    getOne: function (id, email) {
+        return $http.get(base+'/api/v1/bucketList/data/list/' + id, {
+            method: 'GET',
+            params: {
+                token: email
+            }
+        });
+    },
+>>>>>>> origin/master
     saveItem: function (form, email) {
         return $http.post(base+'/api/v1/bucketList/data/item', form, {
             method: 'POST',
@@ -111,6 +196,7 @@ return {
             }
         });
     }
+<<<<<<< HEAD
     */
     }
 
@@ -399,3 +485,7 @@ $rootScope.notify =function(text){
 
 
 
+=======
+}
+});
+>>>>>>> origin/master

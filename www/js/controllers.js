@@ -3,9 +3,14 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
 //CONTROLES DE USUARIOS
 .controller('SignInCtrl', function ($rootScope, $scope, API, $window, $stateParams, $ionicViewSwitcher, $ionicNavBarDelegate) {
     // if the user is already logged in, take him to his bucketlist
+<<<<<<< HEAD
     if ($rootScope.isSessionActive()) 
     {
         $window.location.href = ('#/menu/tab/emp_afi');
+=======
+    if ($rootScope.isSessionActive()) {
+        $window.location.href = ('#/bucket/emp_afi');
+>>>>>>> origin/master
     }
 
     $scope.user = {
@@ -13,33 +18,52 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
         password: ""
     };
 
+<<<<<<< HEAD
     $scope.validateUser = function () 
     {
         var email = this.user.email;
         var password = this.user.password;
         
+=======
+    $scope.validateUser = function () {
+        var email = this.user.email;
+        var password = this.user.password;
+>>>>>>> origin/master
         if(!email || !password) {
             //alert('Please enter valid credentials');
         	$rootScope.notify("Please enter valid credentials");
         	return false;
         }
+<<<<<<< HEAD
         
         $rootScope.show('Please wait.. Authenticating');
         /*
+=======
+        $rootScope.show('Please wait.. Authenticating');
+>>>>>>> origin/master
         API.signin({
             email: email,
             password: password
         }).success(function (data) {
+<<<<<<< HEAD
         */   
             $rootScope.setToken(email); // create a session kind of thing on the client side
             $rootScope.hide();
             $window.location.href = ('#/menu/tab/emp_afi');
         /*   
+=======
+            $rootScope.setToken(email); // create a session kind of thing on the client side
+            $rootScope.hide();
+            $window.location.href = ('#/bucket/emp_afi');
+>>>>>>> origin/master
         }).error(function (error) {
             $rootScope.hide();
             $rootScope.notify("Invalid Username or password");
         });
+<<<<<<< HEAD
         */
+=======
+>>>>>>> origin/master
     }
 
     $scope.showCard = false;
@@ -48,6 +72,7 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
      $scope.showCard = true;
     }  
 
+<<<<<<< HEAD
     $scope.forgotPassword = function (){        
     $ionicViewSwitcher.nextDirection('forward');
     //$state.go('auth.forgot-password');
@@ -61,20 +86,40 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
     $window.location.href = ('#/signup');
     $ionicNavBarDelegate.showBackButton(true);
     };
+=======
+    $scope.forgotPassword = function (){
+    $ionicViewSwitcher.nextDirection('forward');
+    //$state.go('auth.forgot-password');
+    $window.location.href = ('#/auth/forgot-password');
+    $ionicNavBarDelegate.showBackButton(true);
+  };
+
+>>>>>>> origin/master
 })
 
 .controller('ForgotPasswordCtrl', function($scope, $state, $ionicViewSwitcher, $ionicNavBarDelegate){
   $scope.resetPassword = function () {
     $ionicViewSwitcher.nextDirection('back');
+<<<<<<< HEAD
      $state.go('signin', { card: true });
+=======
+     $state.go('auth.signin', { card: true });
+>>>>>>> origin/master
    // $window.location.href = ('#/auth/signin');
     $ionicNavBarDelegate.showBackButton(false);
   };
 })
 
+<<<<<<< HEAD
 .controller('SignUpCtrl', function($rootScope, $scope, API, $window) {
     $scope.user = 
     {
+=======
+
+
+.controller('SignUpCtrl', function ($rootScope, $scope, API, $window) {
+    $scope.user = {
+>>>>>>> origin/master
         email: "",
         password: "",
         name: ""
@@ -89,17 +134,26 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
         	return false;
         }
         $rootScope.show('Please wait.. Registering');
+<<<<<<< HEAD
         /*
+=======
+>>>>>>> origin/master
         API.signup({
             email: email,
             password: password,
             name: uName
         }).success(function (data) {
+<<<<<<< HEAD
         */    
             $rootScope.setToken(email); // create a session kind of thing on the client side
             $rootScope.hide();
             $window.location.href = ('#/tab/fact-reciente');
         /*    
+=======
+            $rootScope.setToken(email); // create a session kind of thing on the client side
+            $rootScope.hide();
+            $window.location.href = ('#/bucket/fact-reciente');
+>>>>>>> origin/master
         }).error(function (error) {
             $rootScope.hide();
         	if(error.error && error.error.code == 11000)
@@ -112,6 +166,7 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
         	}
             
         });
+<<<<<<< HEAD
         */
     }
 })
@@ -214,6 +269,11 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
 
 
 /*
+=======
+    }
+})
+
+>>>>>>> origin/master
 .controller('myListCtrl', function ($rootScope, $scope, API, $timeout, $ionicModal, $window) {
     $rootScope.$on('fetchAll', function(){
             API.getAll($rootScope.getToken()).success(function (data, status, headers, config) {
@@ -327,16 +387,26 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
 
 .controller('newCtrl', function ($rootScope, $scope, API, $window) {
         $scope.data = {
+<<<<<<< HEAD
             item: ""
         };
+=======
+	        item: ""
+	    };
+>>>>>>> origin/master
 
         $scope.close = function () {
             $scope.modal.hide();
         };
 
         $scope.createNew = function () {
+<<<<<<< HEAD
             var item = this.data.item;
             if (!item) return;
+=======
+			var item = this.data.item;
+        	if (!item) return;
+>>>>>>> origin/master
             $scope.modal.hide();
             $rootScope.show();
             
@@ -361,4 +431,35 @@ angular.module('CaaMApp.controllers', ['CaaMApp.services'])
                 });
         };
     })
+<<<<<<< HEAD
 */
+=======
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+//CONTROLES TABS
+.controller('TabsContadorCtrl', function($scope) {
+  $scope.data = {  badgeCount : 3  };
+})
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+//CONTROLES DE EMPRESAS Y FACTURAS
+.controller('emp_afi_Ctrl', function($scope, EmpServiceFactura, $ionicScrollDelegate) {
+
+ $scope.empresas = EmpServiceFactura.all();
+
+ $scope.clearSearch = function() {
+  $scope.data.searchQuery = '';   };
+  
+ $scope.scrollBottom = function() {
+  $ionicScrollDelegate.scrollBottom(true); };
+
+ $scope.scrollTop = function() {
+  $ionicScrollDelegate.scrollTop(true);  };
+
+})
+
+.controller('emp_afi_fact_Ctrl', function($scope, $stateParams, EmpServiceFactura) {
+ $scope.empresa =  EmpServiceFactura.get($stateParams.empresasId);
+})
+
+>>>>>>> origin/master
