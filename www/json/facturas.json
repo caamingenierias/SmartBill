@@ -1,0 +1,218 @@
+[
+  {
+   "id": "0",       
+   "id_empresa": "0",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "ALK-0000000001",
+   "fecha" : "01/04/2015",
+   "total": 290800,
+   "vista":1
+  },
+  { 
+   "id": "1",       
+   "id_empresa": "1",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "CLA-0000000001",
+   "fecha" : "02/04/2015",
+   "total": 560000,
+   "vista":0
+  },
+  { 
+   "id": "2",       
+   "id_empresa": "2",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "DIS-0000000001",
+   "fecha" : "03/04/2015",
+   "total": 230800,
+   "vista":1
+  },
+  { 
+   "id": "3",       
+   "id_empresa": "3",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "EXT-0000000001",
+   "fecha" : "04/04/2015",
+   "total": 100000,
+   "vista":1
+  },
+  { 
+   "id": "4",       
+   "id_empresa": "4",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "FAL-0000000001",
+   "fecha" : "05/04/2015",
+   "total": 91800,
+   "vista":1
+  },
+  { 
+   "id": "5",       
+   "id_empresa": "5",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "FAR-0000000001",
+   "fecha" : "06/04/2015",
+   "total": 23000,
+   "vista":1
+  },
+  { 
+   "id": "6",       
+   "id_empresa": "6",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "HAR-0000000001",
+   "fecha" : "07/04/2015",
+   "total": 55000,
+   "vista":1
+  },
+  {
+   "id": "7",       
+   "id_empresa": "7",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "HOM-0000000001",
+   "fecha" : "08/04/2015",
+   "total": 4560000,
+   "vista":1
+  },
+  { 
+   "id": "8",       
+   "id_empresa": "8",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "JUA-0000000001",
+   "fecha" : "09/04/2015",
+   "total": 96000,
+   "vista":1
+  },
+  {
+   "id": "9",       
+   "id_empresa": "9",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "JUM-0000000001",
+   "fecha" : "10/04/2015",
+   "total": 657700,
+   "vista":1
+  },
+  {
+   "id": "10",       
+   "id_empresa": "10",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "LAR-0000000001",
+   "fecha" : "11/04/2015",
+   "total": 45000,
+   "vista":1
+  },    
+  {
+   "id": "11",       
+   "id_empresa": "11",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "MEG-0000000001",
+   "fecha" : "12/04/2015",
+   "total": 3400000,
+   "vista":1
+  },
+  {
+   "id": "12",       
+   "id_empresa": "12",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "MAG-0000000001",
+   "fecha" : "13/04/2015",
+   "total": 640000,
+   "vista":1
+  },
+  {
+   "id": "13",       
+   "id_empresa": "13",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "MOV-0000000001",
+   "fecha" : "14/04/2015",
+   "total": 450789,
+   "vista":1
+  },
+  {
+   "id": "14",       
+   "id_empresa": "14",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "PRE-0000000001",
+   "fecha" : "15/04/2015",
+   "total": 67543,
+   "vista":1
+  },
+  {
+   "id": "15",       
+   "id_empresa": "15",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "SUB-0000000001",
+   "fecha" : "16/04/2015",
+   "total": 210000,
+   "vista":1
+  },
+  {
+   "id": "16",       
+   "id_empresa": "16",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "TIG-0000000001",
+   "fecha" : "17/04/2015",
+   "total": 70000,
+   "vista":1
+  },
+  { 
+   "id": "17",       
+   "id_empresa": "3",  
+   "num_fact":     "0000000002",
+   "fact_pdf": "EXT-0000000002",
+   "fecha" : "18/04/2015",
+   "total": 250000,
+   "vista":1
+  },
+  { 
+   "id": "18",       
+   "id_empresa": "3",  
+   "num_fact":     "0000000003",
+   "fact_pdf": "EXT-0000000003",
+   "fecha" : "19/04/2015",
+   "total": 100000,
+   "vista":1
+  },
+  { 
+   "id": "19",       
+   "id_empresa": "17",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "COM-0000000001",
+   "fecha" : "24/05/2015",
+   "total": 100000,
+   "vista":1
+  },
+  { 
+   "id": "20",       
+   "id_empresa": "17",  
+   "num_fact":     "0000000002",
+   "fact_pdf": "COM-0000000002",
+   "fecha" : "25/05/2015",
+   "total": 250000,
+   "vista":0
+  },
+  { 
+   "id": "21",       
+   "id_empresa": "17",  
+   "num_fact":     "0000000003",
+   "fact_pdf": "COM-0000000003",
+   "fecha" : "25/05/2015",
+   "total": 50000,
+   "vista":0
+  },
+  { 
+   "id": "22",       
+   "id_empresa": "18",  
+   "num_fact":     "0000000001",
+   "fact_pdf": "OLI-0000000001",
+   "fecha" : "05/05/2015",
+   "total": 250000,
+   "vista":1
+  },
+  { 
+   "id": "23",       
+   "id_empresa": "18",  
+   "num_fact":     "0000000002",
+   "fact_pdf": "OLI-0000000002",
+   "fecha" : "06/05/2015",
+   "total": 1000000,
+   "vista":0
+  }
+  ]

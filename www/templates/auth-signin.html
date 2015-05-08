@@ -1,0 +1,31 @@
+<ion-view title="Smart Bill App"  align-title="center" class="login">
+
+ <ion-content has-header="true" padding="true">
+ </br></br></br></br></br></br></br>
+
+ <div class="card" ng-if="showCard">
+  <div class="item item-divider">
+   Email sent
+  </div>
+  <div class="item item-text-wrap">
+  Usted recibió un correo electrónico para restablecer su contraseña. Restablecer la contraseña y login!
+  </div>
+ </div>
+  
+ <div class="list">
+  <label class="item item-input">
+   <input type="email" placeholder="Correo o Telefono" ng-model="user.email">
+  </label>
+  <label class="item item-input">
+   <input type="password" placeholder="Contraseña" ng-model="user.password">
+  </label>
+   
+  <button class="button button-block button-stable" ng-click="validateUser()"> Iniciar sesion </button>
+
+  <button class="button button-block button-clear button-stable" ng-click="forgotPassword()">
+   Recordar contraseña?
+  </button>
+
+  </div>
+ </ion-content>
+</ion-view>

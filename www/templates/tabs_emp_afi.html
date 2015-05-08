@@ -1,0 +1,76 @@
+<ion-view >
+
+ <ion-nav-buttons side="left">
+ 
+  <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+   <h1 class="title">Facturas Recientes</h1>
+
+ </ion-nav-buttons>
+
+ </br></br>
+ 
+  <ion-header-bar class="bar-dark item-input-inset" >
+
+  <div class="item-input-wrapper">
+
+  <i class="icon ion-ios-search placeholder-icon"></i>
+  </br>
+  <input type="search" 
+  placeholder="Search" 
+  ng-model="data.searchQuery"
+  ng-focus="searchFocused = true"
+  ng-blur="searchFocused = false">
+
+  <i class="icon ion-ios-close-empty placeholder-icon" ng-click="clearSearch()"></i>
+
+  </div>
+
+  <!--<button class="button button-clear icon ion-navicon"> </button>-->
+  <!--  <button class="button button-icon button-clear ion-arrow-up-b   icon-left"  ng-click="scrollTop()">    </button>
+    &nbsp&nbsp&nbsp&nbsp
+    <button class="button button-icon button-clear ion-arrow-down-b icon-left" ng-click="scrollBottom()"> </button>
+   
+   
+   <button class="button button-clear"  ng-controller="myListCtrl" ng-click="logout()">Logout</button> 
+   -->
+  </ion-header-bar>
+  <!--<div class="bar bar-sub-header bar-stable">
+   <div class="button-bar" >
+   </div> 
+  </div>-->
+  
+  <ion-content has-tabs="true">
+   </br></br> <!-- </br></br> -->
+   <!-- {{ (pet.firstName)   ||  ( pet.firstName +' '+  pet.firstName) }}  -->
+
+   <div class="list">
+    <!-- | orderBy:'ultfact' -->
+    <a ng-repeat="empresa in empresas | filter: data.searchQuery " class="item item-thumbnail-left"
+     href="#/menu/tab/emp_afi_fact/{{empresa.id}}">
+     <!-- ui-sref="tabs.fact-detalle({petsId: empresa.id })"-->
+     <!-- ng-href="https://www.google.com/#q={{empresa.nombre}}"-->
+     <!-- <img ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}"> -->
+    
+        
+    <img src="{{empresa.imagen}}">
+    <h2>{{ empresa.nombre}}</h2>
+    <p>
+     <i style="padding-right: 0.3em" class="ion-clock"></i> 
+     <span style="font-size:0.9em;color: #7ab800" >SALDO: {{empresa.saldo|currency}}</span>
+    </p>
+    <span style="aling=left" ng-if="empresa.facturas != 0" class="badge badge-assertive"  >{{empresa.facturas}}</span>
+    <!--
+    <span style="font-size: 2em" class="badge ion-arrow-right-b">      </span>
+    -->
+    <i style="padding-right: 0.4em" class="ion-person-stalker"></i><span style="font-size:0.9em">{{empresa.ultfact}}</span>
+    <p>
+     <i style="padding-right: 0.7em" class="ion-android-walk"></i>
+     <span style="font-size:0.9em">Facturas: {{ empresa.total_facturas}}</span>
+    </p>  
+    
+
+   </a>{{empresa.facturas}}
+   </div>
+
+  </ion-content>
+</ion-view>

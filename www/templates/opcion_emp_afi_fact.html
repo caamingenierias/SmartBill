@@ -1,0 +1,78 @@
+<ion-view ng-controller="emp_afi_fact_Ctrl">
+ 
+ <ion-nav-buttons side="left">
+  <div class="buttons">
+  
+   <button class="button button-icon icon ion-ios-minus-outline"
+    ng-click="data.showDelete = !data.showDelete; 
+              data.showReorder = false">
+   </button>
+  
+  </div>
+  <h1 class="title">Estado de Compras</h1>
+  <div class="buttons">
+  
+   <button class="button button-icon icon ion-arrow-expand" 
+    ng-click="data.showReorder = !data.showReorder; 
+              data.showDelete = false">
+   </button>
+  
+  </div>
+ </ion-nav-buttons>
+
+    
+
+ <ion-content >
+
+  <div class="item" align="center">
+   <img class="title-image" src="{{empresa.imagen}}"  width="70%" height="50px">
+  </div> 
+<!--         ng-if="factura.id_empresa == empresa.id"-->
+ 
+
+  <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+   <ion-item 
+         ng-repeat="factura in facturas" 
+         ng-if="factura.id_empresa == empresa.id"
+         item="factura" 
+         ng-click="leerfactura(factura,empresa.sigla)"
+         class="item-remove-animate item-icon-right"
+>
+         <!--href="#/item/{{item.id}}" -->
+
+
+
+     <i ng-if="factura.vista == 1" class="icon ion-folder positive" ></i>
+     <i ng-if="factura.vista == 0" class="icon ion-folder assertive"></i>
+
+       <h4>FACTURA:  {{ factura.num_fact }}</h4>
+       <h4>{{ factura.fecha }}</h4>
+       <h4>VALOR: {{factura.total|currency}}</h4>
+
+<!--Using the HTML5 progress element 
+<progress ng-hide="download.progress==1;" max="1" value="{{download.progress}}"></progress>
+-->
+ 
+
+    <!-- ******************** OPCIONES OCULTAS **************************** -->   
+    <!-- ****************************************************************** -->
+    <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(factura)">
+    </ion-delete-button>
+    <!-- ****************************************************************** -->
+    <ion-option-button class="button-assertive" ng-click="edit(factura)">
+      Edit
+    </ion-option-button>
+    <!-- ****************************************************************** -->
+    <ion-option-button class="button-calm" ng-click="share(factura)">
+      Share
+    </ion-option-button>
+    <!-- ****************************************************************** -->
+    <ion-reorder-button class="ion-arrow-expand" 
+     on-reorder="moveItem(factura,$fromIndex, $toIndex)">
+    </ion-reorder-button>
+    <!-- ****************************************************************** -->
+
+  </ion-item>
+ </ion-list>
+
+</ion-content>

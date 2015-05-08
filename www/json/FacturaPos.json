@@ -1,0 +1,18 @@
+{
+ "Encabezado":
+ {"NumeroFactura":"SP-060026","Nit":"806015988","Resolucion":"NO. 60000066617 DEL 17/02/2012 FACT. AUT. DE LA SCP-00001 A SCP-100000","IdentCliente":"1047435084","Cliente":"CRUZ MARTINEZ JESUS","Email":""},
+ "Detalles":
+ {
+  "Items":
+  [
+   {"Producto":"ZYX MOUSE GENIUS ERGO 7000 (GREE)","Precio":"25862.07","Cantidad":1,"ValorTotal":"25862.00","Iva":"4138.00"},
+   {"Producto":"MEMORIA USB ADATA 4G","Precio":"8620.69","Cantidad":1,"ValorTotal":"8621.00","Iva":"1379.00"},
+   {"Producto":"ZYX KIT LIMPIADOR","Precio":"4310.34","Cantidad":1,"ValorTotal":"4310.00","Iva":"690.00"},
+   {"Producto":"ZYX PORTATIL HP MINI 110-3712XXXXXXXXXXXXXXXXX","Precio":"590000.00","Cantidad":1,"ValorTotal":"590000.00","Iva":"0.00"}
+  ]
+ },
+ "Pie":
+ {
+  "Cantidad":4,"ValorTotal":"635000.00","Iva":"6207.00"
+ }
+}

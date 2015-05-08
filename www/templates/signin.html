@@ -1,0 +1,60 @@
+<ion-view title="Smart Bill App"  align-title="center" class="login" 
+ng-controller="SignInCtrl">
+
+   
+
+ <ion-content has-header="true" padding="true">
+ </br></br></br></br></br></br></br>
+
+ <div class="card" ng-if="showCard">
+  <div class="item item-divider">
+   Email sent
+  </div>
+  <div class="item item-text-wrap">
+  Usted recibió un correo electrónico para restablecer su contraseña. Restablecer la contraseña y login!
+  </div>
+ </div>
+  
+ <div class="list">
+  <label class="item item-input">
+   <input type="email" placeholder="Correo o Telefono" ng-model="user.email">
+  </label>
+  <label class="item item-input">
+   <input type="password" placeholder="Contraseña" ng-model="user.password">
+  </label>
+  
+  <!-- 
+  <button class="button button-block button-stable" ng-click="validateUser()"> Iniciar sesion </button>
+  <p class="text-center">
+              <a href="#/forgot-password">Forgot password</a>
+            </p>
+  -->
+
+<!--
+   <button class="button button-block button-positive icon-left ion-social-facebook" ng-click="validateUser()" ua-oauth-link="facebook" style="background: #4c66a4;">
+          <span ng-show="!loading">Log in with SmartBill</span>
+          <i ng-show="loading" class="ion-loading-b">Log in with SmartBill</i>
+        </button>
+-->
+       
+                    
+                           <button class="button button-block button-stable" ng-click="validateUser()"> Iniciar sesion </button>
+  
+                       
+                           <button class="button button-block button-stable" ng-click="crearCuenta()"> Crear Cuenta </button>
+  
+
+
+  <button class="button button-block button-clear button-stable" ng-click="forgotPassword()">
+   Recordar contraseña?
+  </button>
+
+  <!--
+  <p class="text-center">
+              <a href="#/forgot-password">Forgot password</a>
+            </p>
+      -->    
+
+  </div>
+ </ion-content>
+</ion-view>
